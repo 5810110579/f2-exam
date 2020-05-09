@@ -3,19 +3,19 @@ public class Cuboid extends Shape implements AreaCalculable, VolumeCalculable{
     private double height;
     private double depth;
 
-    public Cuboid(String name, double radius, double height, double depth){
+    public Cuboid(String name, double width, double height, double depth){
         super(name);
-        this.radius = radius;
+        this.width = width;
         this.height = height;
         this.depth = depth;
     }
 
-    public double getRadius(){
-        return radius;
+    public double getWidth(){
+        return width;
     }
 
-    public void setRadius(double radius){
-        this.radius = radius;
+    public void setWidth(double width){
+        this.width = width;
     }
 
     public double getHeight(){
@@ -43,7 +43,7 @@ public class Cuboid extends Shape implements AreaCalculable, VolumeCalculable{
     }
 
     public void zoom(double factor){
-        radius = radius * factor;
+        width = width * factor;
         height = height * factor;
         depth = depth * factor;
     }

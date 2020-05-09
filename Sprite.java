@@ -1,7 +1,7 @@
 public abstract class Sprite{
     private String name;
-    protected float x;
-    protected float y;
+    protected double x;
+    protected double y;
 
     public Sprite(String name){
         this.name = name;
@@ -9,15 +9,15 @@ public abstract class Sprite{
         y = 0.0;
     }
 
-    public float getX(){
+    public double getX(){
         return x;
     }
 
-    public float getY(){
+    public double getY(){
         return y;
     }
 
-    public void moveTo(float x, float y){
+    public void moveTo(Double x, Double y){
         this.x = x;
         this.y = y;
     }
