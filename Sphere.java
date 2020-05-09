@@ -1,7 +1,7 @@
-public class Circle extends Shape implements AreaCalculable{
+public class Sphere extends Shape implements AreaCalculable, VolumeCalculable{
     private double radius;
 
-    public Circle(String name,double radius){
+    public Sphere(String name, double radius){
         super(name);
         this.radius = radius;
     }
@@ -15,13 +15,14 @@ public class Circle extends Shape implements AreaCalculable{
     }
 
     public double getArea(){
-        return Math.PI * radius * radius;
+        return 4 * Math.PI * radius * radius;
+    }
+
+    public double getVolume(){
+        return (4/3) * Math.PI * radius * radius * radius;
     }
 
     public void zoom(double factor){
         radius = radius * factor;
     }
 }
-
-
-
